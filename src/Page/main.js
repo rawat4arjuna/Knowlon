@@ -1,17 +1,19 @@
 import React from "react";
-import LeftPanel from "../component/LeftPanel";
-import RightPanel from "../component/RightPanel";
-import CenterPanel from "../component/CenterPanel";
-import NavPanel from "../component/NavPanel";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
+import Login from './login'
 export default function Main() {
   return (
-    <>
-    <NavPanel/>
-      <div className="main">
-        <LeftPanel />
-        <CenterPanel />
-        <RightPanel />
-      </div>
-    </>
+   <Router>
+      <Switch>
+          <Route exact path="/">
+            <Login />
+          </Route>
+        </Switch>
+   </Router>
   );
 }
