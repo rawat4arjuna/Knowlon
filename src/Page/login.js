@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import { ContextOne } from "../Context/AppContext";
-import Appbar from "../component/appBar";
+import Appbar from "../Component/appBar";
 import { changeTheme } from "../Context/userAction";
 import { Paper } from "@material-ui/core";
 export default function Login() {
