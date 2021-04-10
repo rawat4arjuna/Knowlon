@@ -8,27 +8,35 @@ import dark from "../Theme/darkTheme";
 import { makeStyles } from "@material-ui/core/styles";
 import { createMuiTheme } from "@material-ui/core/styles";
 import { ContextOne } from "../../src/Context/AppContext";
+const useStyles = makeStyles(theme => ({
+  root: {
+    marginBottom: theme.spacing(2),
+    flexGrow: 1
+  },
+  title: {
+    flexGrow: 1
+  }
+}));
 export default function Main() {
   // const [theme, setTheme] = useState(false);
   // let {state ,dispatch} = useContext(ContextOne);
-  let state = useContext(ContextOne);
+  let {state} = useContext(ContextOne);
   let appliedTheme;
   useEffect(() => {
-    console.log(state)
-    appliedTheme = createMuiTheme(state ? light : dark);
-  }, [state])
- // const classes = useStyles();
+    console.log(state);
+   
+  }, [state]);
+  const classes = useStyles();
+  appliedTheme = createMuiTheme(state.theme ? light : dark);
   return (
-    <ContextOneProvider>
-      <ThemeProvider theme={appliedTheme}>
-        <Router>
-          <Switch>
-            <Route exact path="/">
-              <Login />
-            </Route>
-          </Switch>
-        </Router>
-      </ThemeProvider>
-    </ContextOneProvider>
+    <ThemeProvider theme={appliedTheme}>
+      <Router>
+        <Switch>
+          <Route exact path="/">
+            <Login />
+          </Route>
+        </Switch>
+      </Router>
+    </ThemeProvider>
   );
 }

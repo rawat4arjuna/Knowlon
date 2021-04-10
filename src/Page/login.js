@@ -9,12 +9,18 @@ export default function Login() {
     console.log("ppppp,", state);
   }, [state]);
   const changetheme = () => {
-    changeTheme({ theme: false }, dispatch);
+      if(state.theme)
+      {
+        changeTheme({ theme: false }, dispatch);
+      }
+      else{
+        changeTheme({ theme: true }, dispatch);
+      }
+   
   };
   return (
     <>
       <Appbar />
-      ho
       <Paper>
           hoho
       </Paper>
