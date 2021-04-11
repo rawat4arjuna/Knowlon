@@ -11,7 +11,7 @@ export default function Containers(props) {
   return (
     <React.Fragment>
       <CssBaseline />
-      <Container maxWidth="sm" className={classes.container} style={{minHeight:'100vh'}}>
+      <Container maxWidth="sm" className={classes.container} justifyContent="center" alignItems="center"  style={{minHeight:'100vh'}}>
         {props.children}
       </Container>
     </React.Fragment>

@@ -14,8 +14,8 @@ const useStyles = makeStyles((theme) => ({
 
 export default function Input() {
   const classes = useStyles();
-
   return (
-      <TextField id="outlined-basic" label="Outlined" variant="outlined" />
+      <TextField
+      id="outlined-basic" label="Outlined" variant="outlined" />
   );
 }

@@ -13,10 +13,22 @@
       root: {
         display: 'flex',
         flexWrap: 'wrap',
+        '& > *': {
+          margin: 'auto',
+          width: '100%',
+          height: '100%',
+        }
       },
       loginpaper:{
-          margin:'auto'
+          // margin:'auto'
+      },
+      griditems:{
+        display:'flex',
+        placeContent:'center',
+        padding:10
+        
       }
+
     },
   
 
