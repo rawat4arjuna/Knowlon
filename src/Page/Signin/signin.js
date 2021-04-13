@@ -9,25 +9,29 @@ import {
   GridConatiner,
   GridItem,
 } from "../../Component/component";
-import { Button } from "@material-ui/core";
+import { Button, Typography } from "@material-ui/core";
 export default function Signin() {
   const count = useSelector((state) => state.counter.value);
   const dispatch = useDispatch();
 
   return (
     <Containers>
-      <Papers>
-        <GridConatiner spacing={3}>
-          <GridItem xs={12} sm={12}>
-            <Input />
+      <Papers><GridItem xs={12}>
+        <GridConatiner spacing={4}>
+        <GridItem xs={12}>
+            <Typography>Login </Typography>
           </GridItem>
-          <GridItem xs={12} sm={12}>
-            <Input />
+          <GridItem xs={12}>
+            <Input  type="email" placeholder="Email"  />
           </GridItem>
-          <GridItem xs={12} sm={12}>
+          <GridItem xs={12}>
+            <Input  type ="password" placeholder="Password" />
+          </GridItem>
+          <GridItem xs={12}>
             <Btn name={"my"} />
-          </GridItem>
+            </GridItem>
         </GridConatiner>
+        </GridItem>
       </Papers>
     </Containers>
   );
