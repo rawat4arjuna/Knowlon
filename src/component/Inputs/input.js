@@ -17,6 +17,9 @@ export default function Input(props) {
        placeholder={props.placeholder}
        type={props.type}
        variant="outlined"
+       color="primary"
+       required
+       fullWidth
        />
   );
 }

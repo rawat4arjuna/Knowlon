@@ -9,7 +9,10 @@ export default function Btn(props) {
   const classes = useStyles();
   return (
     <Button
-      className={classes.root}
+      // className={classes.root}
+      fullWidth
+      color="primary"
+      variant="contained"
       onClick={() => {
         props.onClick();
       }}

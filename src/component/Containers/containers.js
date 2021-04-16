@@ -3,7 +3,12 @@ import CssBaseline from '@material-ui/core/CssBaseline';
 import { makeStyles } from "@material-ui/styles";
 import Container from '@material-ui/core/Container';
 const useStyles = makeStyles((theme) => ({
-    container: theme.palette.root,
+    container: {
+      display:'flex',
+      alignItems:'center',
+      justifyContent:'center'
+    }
+,
     
   }));
 export default function Containers(props) {
@@ -11,7 +16,7 @@ export default function Containers(props) {
   return (
     <React.Fragment>
       <CssBaseline />
-      <Container maxWidth="sm" className={classes.container} justifyContent="center" alignItems="center"  style={{minHeight:'100vh'}}>
+      <Container  component="main" maxWidth="xs" className={classes.container}  style={{minHeight:'100vh'}}>
         {props.children}
       </Container>
     </React.Fragment>
