@@ -2,7 +2,7 @@ const light = {
   palette: {
     type: 'light',
     primary: {
-      main: '#ef6c00',
+      main: '#FF165D',
     },
     secondary: {
       main: '#f50057',
@@ -10,7 +10,7 @@ const light = {
   },
   spacing: 8,
   shape: {
-    borderRadius: 4,
+    borderRadius: 10,
   },
   overrides: {
     MuiAppBar: {
@@ -24,7 +24,7 @@ const light = {
     },
     MuiButton: {
       root: {
-        background: 'linear-gradient(45deg, #FE6B8B 30%, #FF8E53 90%)',
+        background: 'linear-gradient(45deg, #FE6B8B 30%, #FF165D 90%)',
         border: 0,
         borderRadius: 3,
         boxShadow: '0 3px 5px 2px rgba(255, 105, 135, .3)',

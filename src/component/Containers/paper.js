@@ -8,7 +8,8 @@ const useStyles = makeStyles((theme) => ({
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
-    maxWidth:400
+    maxWidth:400,
+    padding:theme.spacing(2)
   }
   ,
 }));
