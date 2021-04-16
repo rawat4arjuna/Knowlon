@@ -74,6 +74,9 @@ const light = {
   },
   typography: {
     fontFamily: 'comic sans',
+    h4:{
+      fontWeight: 'bold',
+    }
   },
  
 };

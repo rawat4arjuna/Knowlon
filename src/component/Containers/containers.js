@@ -2,6 +2,7 @@ import React from 'react';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import { makeStyles } from "@material-ui/styles";
 import Container from '@material-ui/core/Container';
+import background from '../../Img/background.svg'
 const useStyles = makeStyles((theme) => ({
     container: {
       display:'flex',
@@ -16,7 +17,7 @@ export default function Containers(props) {
   return (
     <React.Fragment>
       <CssBaseline />
-      <Container  component="main" maxWidth="xs" className={classes.container}  style={{minHeight:'100vh'}}>
+      <Container  component="main" maxWidth="xs" className={classes.container}  style={{minHeight:'100vh',minWidth:'100vw',backgroundImage:`url(${background})`}}>
         {props.children}
       </Container>
     </React.Fragment>
